@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 # Create your views here.
 def info(request):
     urls = InfoModel.objects.all()
-    return render(request,'info.html',{'urls':urls})
+    return render(request,'index.html',{'urls':urls})
 class InfoRegister(CreateView):
     template_name = 'register.html'
     model = InfoModel
